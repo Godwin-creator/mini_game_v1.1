@@ -175,8 +175,8 @@ p {
 @media screen and (max-width: 580px) {
     :root {
         --game-height: 160px;
-        --obstacle-size: 16px;
-        --perso-bottom: 16px;
+        --obstacle-size: 12px;
+        --perso-bottom: 9px;
     }
 
     section {
