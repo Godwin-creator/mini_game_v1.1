@@ -5,10 +5,24 @@ const scoreDiv = document.getElementById("score");
 let obstacleCounted = false;
 let gameOver = false;
 
+const sonVole  = new Audio("sons/sonVole.mp3");
+const sonScore = new Audio("sons/sonScore.mp3");
+const sonChoc  = new Audio("sons/sonChoc.mp3");
+
+sonVole.preload  = "auto";
+sonScore.preload = "auto";
+sonChoc.preload  = "auto";
+
+function playSound(audio) {
+    audio.currentTime = 0;
+    audio.play().catch(() => {});
+}
+
 function sauter() {
     if (gameOver) return;
     if (!perso.classList.contains("animation")) {
         perso.classList.add("animation");
+        playSound(sonVole);
         setTimeout(() => {
             perso.classList.remove("animation");
         }, 500);
@@ -31,30 +45,29 @@ var verification = setInterval(function () {
     if (gameOver) return;
 
     var jeu = document.querySelector(".jeu");
-    var jeuWidth = jeu.offsetWidth;
-
     var persoRect = perso.getBoundingClientRect();
-    var obsRect = obstaclesEl.getBoundingClientRect();
-    var jeuRect = jeu.getBoundingClientRect();
+    var obsRect   = obstaclesEl.getBoundingClientRect();
+    var jeuRect   = jeu.getBoundingClientRect();
 
-    var persoBottom = jeuRect.bottom - persoRect.bottom;
     var obsLeft = obsRect.left - jeuRect.left;
 
     var overlapX = obsRect.left < persoRect.right - 2 && obsRect.right > persoRect.left + 2;
-    var overlapY = obsRect.top < persoRect.bottom - 2;
+    var overlapY = obsRect.top  < persoRect.bottom - 2;
 
     if (overlapX && overlapY) {
         obstaclesEl.style.animation = "none";
         gameOver = true;
+        playSound(sonChoc);
+        clearInterval(verification);
         setTimeout(() => {
             alert("Vous avez perdu \n\nSCORE : " + score);
-        }, 50);
-        clearInterval(verification);
+        }, 200);
         return;
     }
 
     if (obsLeft + obsRect.width < 0 && !obstacleCounted) {
         updateScore();
+        playSound(sonScore);
         obstacleCounted = true;
     }
     if (obsLeft > 0) {
