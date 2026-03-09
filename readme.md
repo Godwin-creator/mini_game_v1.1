@@ -1,5 +1,7 @@
 # Mini Game - Jeu de Saut
 
+## [Tester le jeu](https://godwin-creator.github.io/mini_game_v1.1/)
+
 Un petit jeu de saut simple développé en HTML, CSS et JavaScript.
 
 ## Description
