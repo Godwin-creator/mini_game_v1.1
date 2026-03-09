@@ -19,7 +19,7 @@ Ce mini-jeu est un projet ludique créé pour s'amuser avec les concepts de base
 ## Comment jouer
 
 1. Le jeu démarre automatiquement avec un score de 0
-2. Cliquez sur le bouton "Jump", espace ou sur la page(dans le vide) pour faire sauter le personnage
+2. Cliquez sur le bouton "Jump" ou espace pour faire sauter le personnage
 3. Évitez les obstacles qui arrivent de la droite
 4. Le score augmente automatiquement tant que vous survivez
 5. Si vous touchez un obstacle, le jeu s'arrête et affiche votre score final

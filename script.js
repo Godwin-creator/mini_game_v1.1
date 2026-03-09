@@ -14,8 +14,6 @@ function sauter() {
     }
 }
 
-document.addEventListener("click", sauter);
-
 document.addEventListener("keydown", (event) => {
     if (event.code === "Space") {
         event.preventDefault();
