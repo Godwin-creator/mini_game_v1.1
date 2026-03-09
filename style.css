@@ -9,7 +9,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: blueviolet;
+    background: linear-gradient(to top, black, rgb(20, 117, 150));
     flex-direction: column;
 }
 section{
@@ -35,7 +35,7 @@ section{
     /*object-fit: cover;*/
 }
 .animation{
-    animation: perso-saut 500ms infinite;
+    animation: perso-saut 1000ms infinite ease-in-out;
 
 }
 /*Animation personnage saute*/
@@ -61,12 +61,12 @@ section{
 .obstacles{
     width: 20px;
     height: 20px;
-    background-color: #333;
+    background-color: black;
     position: relative;
     top: 130px;
     left: 480px;
     border-radius: 50%;
-    animation: anime-obstacles 2.5s infinite;
+    animation: anime-obstacles 2.9s infinite;
 }
 /*animation obstacle*/
 @keyframes anime-obstacles {
@@ -81,7 +81,7 @@ section{
     margin-top: 20px;
     text-align: center;
 }
-a,button{
+a,button,.score{
     padding: 10px 50px;
     border-radius: 4px;
     border: 0;
@@ -105,4 +105,4 @@ p{
         width: 20px;
     }
 }
-/*Coding By Iroukaizen*/
+/*Coding By Iroukaizen & Godwin-creator*/
