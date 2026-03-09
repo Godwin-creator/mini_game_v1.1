@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Mini game</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,20 +12,21 @@
     <section>
         <div class="jeu">
             <div class="perso">
-                <img src="img.png" alt="">
+                <img src="img.png" alt="personnage">
             </div>
-            <div class="obstacles">
-            </div>
+            <div class="obstacles"></div>
         </div>
     </section>
+
     <div class="control">
-        <button onclick="sauter()" >Jump</button>
-        <a href="index.html">Start ... !</a>
-        <br>
-        <br>
         <div class="score">Score: <span id="score">0</span></div>
+        <div class="control-buttons">
+            <button id="btn-jump" onclick="sauter()">Jump</button>
+            <a href="index.html">Restart</a>
+        </div>
     </div>
-    <p>By Iroukaizen & Godwin-creator</p>
+
+    <p>By Iroukaizen &amp; Godwin-creator</p>
     <script src="script.js"></script>
 </body>
 </html>

@@ -37,6 +37,7 @@ Ce mini-jeu est un projet ludique créé pour s'amuser avec les concepts de base
   - Mise en place du score
   - Optimisation de l'aperçu de la page (design)
   - Amélioration de la fluidité du saut
+  - Hébergement avec Github page
 
 ## Technologies utilisées
 
